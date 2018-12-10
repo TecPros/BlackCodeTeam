@@ -34,6 +34,35 @@ app.get('/data',function(req,res){
 	res.send('done')
 })
 
+///////////////////////////////////////////////////////////////////////////
+//                           socket io                                  //
+//////////////////////////////////////////////////////////////////////////
+// here we will implement Socket io 
+
+
+// var app = require('express')();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+
+app.get('/', function(req, res){
+  res.sendFile(__dirname + '/chatRoom.html');
+});
+
+io.on('connection', function(socket){
+  console.log('a user connected');
+});
+
+http.listen(3000, function(){
+  console.log('listening on *:3000');
+});
+
+
+////Ineed to instal npm install --save socket.io
+
+///////////////////////////////////////////////////////////////////////////
+//                           socket io                                  //
+//////////////////////////////////////////////////////////////////////////
+
 var ip ="127.0.0.1"
 var port=process.env.PORT||5000
 app.listen(port);

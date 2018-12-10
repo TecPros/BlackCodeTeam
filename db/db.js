@@ -3,11 +3,11 @@ var mysql = require('mysql');
 
 //Note: to insert tht the database credential
 var dbConnection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: '19919901',
+  host: "db4free.net",
+  user: "ninjascript2",
+  password: 'password',
   insecureAuth: true,
-  database: 'chat'
+  database: 'adcraft2'
 });
 
 //Note:create the connection
