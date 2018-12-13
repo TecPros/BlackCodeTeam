@@ -368,4 +368,51 @@ router.route('/updatepost')
 
 
   });
+
+
+
+  // NOTE: Insert feedback
+
+  router.route('/addfeedback')
+  .post(function(req, res) {
+    var message = req.body.message;
+    
+    console.log(req.body);
+
+    // NOTE: Query to insert the feedback information
+    var query = `insert into feedback (message)
+    values
+    (\"${message}\")`
+
+    // NOTE: insert post information to the database
+    dbConnection.db.query(query, function(err, result) {
+      if (result) {
+        res.send("1")
+      } else {
+        res.send("0")
+      }
+    })
+
+
+  });
+
+// get all the messages from feedback db
+  router.route('/feedbacks')
+  .get(function(req, res) {
+
+    var query = `select * from feedback `
+    dbConnection.db.query(query, function(err, result) {
+      if (result) {
+        console.log('result',result)
+        res.send(result)
+      } else {
+        res.send("0")
+      }
+    })
+  });
+
+
+
+
+
 module.exports = router;

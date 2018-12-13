@@ -27,6 +27,9 @@ app.config(['$routeProvider', function($routeProvider) {
     .when('/monitorscreen', {
       template: '<monitorscreen></monitorscreen>'
     })
+    .when('/azhar', {
+      template: '<feed></feed>'
+    })
     .otherwise({
       redirectTo: '/mainpage'
     })

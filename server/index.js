@@ -9,8 +9,10 @@ var dbConnection = require('../db/db.js')
 
 // NOTE: require the Routers
 var router = require('./routers/route.js');
-const app = express();
 
+var app = require('express')();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
 
 // NOTE : add the allow origion
 app.use(function (req, res, next) {
@@ -47,9 +49,14 @@ app.use(passport.session());
 app.use('/user', router);
 
 
-
+io.on('connection', function(socket){
+  console.log('a user connected');
+  socket.on('chat room', function(msg){
+    io.emit('chat message', msg);
+  });
+});
 // listen for request
 const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => {
+http.listen(PORT, () => {
   console.log(`Serve r is listening on port ${PORT}`);
 });
