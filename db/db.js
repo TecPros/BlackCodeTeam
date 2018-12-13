@@ -4,10 +4,10 @@ var mysql = require('mysql');
 //Note: to insert tht the database credential
 var dbConnection = mysql.createConnection({
   host: "db4free.net",
-  user: "ninjascript2",
-  password: 'password',
+  user: "mahmoudzaid",
+  password: '12345678',
   insecureAuth: true,
-  database: 'adcraft2'
+  database: 'adcraft3'
 });
 
 //Note:create the connection
