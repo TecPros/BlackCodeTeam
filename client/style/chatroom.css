@@ -13,7 +13,7 @@
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, 10%);
-    width: 400px;
+    width: 900px!important;
     padding: 10px;
     background-color:rgba(192, 87, 42, 0.151);
  
@@ -32,3 +32,10 @@
    /* #inside{
        opacity: 100;
    } */
+   .w-75 {
+       width: 870px!important;
+       height: 600px !important;
+       margin-left: 5px;
+       margin-bottom: 5px;
+       margin-top: 5px;
+   }
