@@ -15,6 +15,7 @@ angular.module("app").component("userprofile", {
       that = this
 
       checksession.set(function(data) {
+        console.log(data.data)
         if (data.data != '0') {
           that.user = data.data
           that.retrivepostsbyid()
