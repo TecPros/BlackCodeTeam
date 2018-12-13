@@ -9,23 +9,23 @@ angular.module('app').component('home', {
     this.getuser = function() {
       that = this
 
-      checksession.set(function(data) {
-        if (data.data != '0') {
-          that.user = data.data
-          console.log(that.user);
-        } else {
-          Swal.queue([{
-            type: 'error',
-            title: 'Oops...',
-            text: 'Your session has been End!',
-            preConfirm: () => {
-              $window.location.href = '#!/login';
-            }
+      // checksession.set(function(data) {
+      //   if (data.data != '0') {
+      //     that.user = data.data
+      //     console.log(that.user);
+      //   } else {
+      //     Swal.queue([{
+      //       type: 'error',
+      //       title: 'Oops...',
+      //       text: 'Your session has been End!',
+      //       preConfirm: () => {
+      //         $window.location.href = '#!/login';
+      //       }
 
-          }])
+      //     }])
 
-        }
-      })
+      //   }
+      // })
     }
     this.getuser();
 
