@@ -2,32 +2,32 @@ angular.module('app').component('home', {
 
   controller: function($window, addpost, retriveposts, checksession) {
     // controller function :
-    this.user=[{username:'sa',id:1}
-    ];
+    this.user
+    
 
     //get current user function
-    // this.getuser = function() {
-    //   that = this
+    this.getuser = function() {
+      that = this
 
-    //   checksession.set(function(data) {
-    //     if (data.data != '0') {
-    //       that.user = data.data
-    //       console.log(that.user);
-    //     } else {
-    //       Swal.queue([{
-    //         type: 'error',
-    //         title: 'Oops...',
-    //         text: 'Your session has been End!',
-    //         preConfirm: () => {
-    //           $window.location.href = '#!/login';
-    //         }
+      checksession.set(function(data) {
+        if (data.data != '0') {
+          that.user = data.data
+          console.log(that.user);
+        } else {
+          Swal.queue([{
+            type: 'error',
+            title: 'Oops...',
+            text: 'Your session has been End!',
+            preConfirm: () => {
+              $window.location.href = '#!/login';
+            }
 
-    //       }])
+          }])
 
-    //     }
-    //   })
-    // }
-    // this.getuser();
+        }
+      })
+    }
+    this.getuser();
 
     // NOTE: sweetalert show button
     this.sweetalert = async function(post) {

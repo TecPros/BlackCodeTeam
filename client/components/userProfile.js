@@ -8,32 +8,32 @@ angular.module("app").component("userprofile", {
     deletepost,
     updatepost
   ) {
-    this.user = [{ username: "sa", id: 1 }];
+    this.user 
     // Here we commment this to work on profile and I will add fied user.Azharr
     //get current user function,
-    // this.getuser = function() {
-    //   that = this
+    this.getuser = function() {
+      that = this
 
-    //   checksession.set(function(data) {
-    //     if (data.data != '0') {
-    //       that.user = data.data
-    //       that.retrivepostsbyid()
-    //       console.log(that.user);
-    //     } else {
-    //       Swal.queue([{
-    //         type: 'error',
-    //         title: 'Oops...',
-    //         text: 'Your session has been End!',
-    //         preConfirm: () => {
-    //           $window.location.href = '#!/login';
-    //         }
+      checksession.set(function(data) {
+        if (data.data != '0') {
+          that.user = data.data
+          that.retrivepostsbyid()
+          console.log(that.user);
+        } else {
+          Swal.queue([{
+            type: 'error',
+            title: 'Oops...',
+            text: 'Your session has been End!',
+            preConfirm: () => {
+              $window.location.href = '#!/login';
+            }
 
-    //       }])
+          }])
 
-    //     }
-    //   })
-    // }
-    // this.getuser();
+        }
+      })
+    }
+    this.getuser();
 
     // NOTE: take the indexOf of the post you want deleted then splice it
     this.deleteBtn = post => {
