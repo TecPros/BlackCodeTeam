@@ -5,6 +5,7 @@ angular.module('app').component('contact', {
            swal("Thanks For Feedback!", "Your message is receved!", "success")
 
    }
+   // connect to server 
     this.contactMsg = function(feedback){
       var contactObj= {
         name: feedback.name,

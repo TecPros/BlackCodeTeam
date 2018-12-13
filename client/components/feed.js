@@ -45,12 +45,19 @@ angular.module("app").component("feed", {
   </head>
 <body>
              
+  <header></header>
+    <section id="contact">
+      <div class="section-content">
+        <h1 class="section-header">Welcome <span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> Feedback</span></h1>
+        <h3> We all need people who will give us feedback </h3>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      </div>
   
-  
-  <form >
+  <form style="background-color:blue">
   <div class="form-group">
-   
-    message:<input ng-model="feed.message" class="form-control" type="text">
+   <title> Welcome </title>
+    Message:<input ng-model="feed.message" class="form-control" type="text">
   </div>
   <div class="form-group">
     
