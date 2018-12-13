@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/walid-hajhussien/BlackCodeTeam.git"
+    "url": "git+https://github.com/Mahmoud-Zaid94/BlackCodeTeam.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/walid-hajhussien/BlackCodeTeam/issues"
+    "url": "https://github.com/Mahmoud-Zaid94/BlackCodeTeam/issues"
   },
-  "homepage": "https://github.com/walid-hajhussien/BlackCodeTeam#readme",
+  "homepage": "https://github.com/Mahmoud-Zaid94/BlackCodeTeam#readme",
   "dependencies": {
     "angular": "^1.7.5",
     "angular-animate": "^1.7.5",
