@@ -229,7 +229,7 @@ router.route('/addpost')
 router.route('/contact')
   .post(function(req, res) {
 
-    console.log(req.body)
+    // console.log(req.body)
     res.send('done');
 
   });

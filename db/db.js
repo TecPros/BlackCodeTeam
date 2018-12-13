@@ -91,5 +91,20 @@ dbConnection.query(queryIpTable, function(err, result) {
   }
 })
 
+// Note:Feedeback 
+var feedback = `
+CREATE TABLE IF NOT EXISTS feedback (
+  id INTEGER NOT NULL AUTO_INCREMENT ,
+  message text Not Null
+);
+`
+// connection data usiing query 
+dbConnection.query(feedback, function(err, result) {
+  if (result) {
+    console.log('feedback table has been created');
+  } else {
+    console.log('feedback table return an ERROR');
+  }
+})
 
 module.exports.db = dbConnection;
