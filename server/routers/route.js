@@ -411,6 +411,33 @@ router.route('/updatepost')
     })
   });
 
+  // //NOTE: add comments
+  // router.route('/updatepost')
+  // .post(function(req, res) {
+  //   var postid=req.body.id
+  //   var title = req.body.title;
+  //   var description = req.body.description;
+  //   var name = req.body.name;
+  //   var phone = req.body.phone;
+  //   var availablity = req.body.availablity;
+  //   var date = req.body.date;
+
+  //   console.log(req.body);
+  //   // NOTE: Query to insert the post information
+  //   var query = `UPDATE posts SET title = \"${title}\" , description =  \"${description}\" ,name = \"${name}\" , phone= \"${phone}\"
+  //   , availablity= \"${availablity}\", date= \"${date}\" where id=\"${postid}\"`
+
+  //   // NOTE: update post information to the database
+  //   dbConnection.db.query(query, function(err, result) {
+  //     if (result) {
+  //       res.send("1")
+  //     } else {
+  //       res.send("0")
+  //     }
+  //   })
+
+
+  // });
 
 
 
